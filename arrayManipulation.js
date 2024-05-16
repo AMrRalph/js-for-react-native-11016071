@@ -9,15 +9,21 @@ function processArray(arrayOfNumbers) {
     }
     return processedArray
 }
-
+let a = processArray([1,2,3,4,5])
+// console.log(a)
 
 function formatArrayStrings(arrayOfStrings, processedArray) {
+    let formattedArrayStrings = []
     for (var i = 0; i < arrayOfStrings.length; i++){
         if(processedArray[i] % 2 === 0){
-            arrayOfStrings[i].toUpperCase()
+            formattedArrayStrings.push(arrayOfStrings[i].toUpperCase())
         }else {
-            arrayOfStrings[i].toLowerCase()
+            formattedArrayStrings.push(arrayOfStrings[i].toLowerCase())
         }
     }
+    return formattedArrayStrings
 }
 
+// console.log(formatArrayStrings(['Boy', 'Girl', 'man', 'womAN'], a))
+
+export {processArray, formatArrayStrings};
