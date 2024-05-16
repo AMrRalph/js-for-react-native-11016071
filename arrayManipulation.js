@@ -9,3 +9,15 @@ function processArray(arrayOfNumbers) {
     }
     return processedArray
 }
+
+
+function formatArrayStrings(arrayOfStrings, processedArray) {
+    for (var i = 0; i < arrayOfStrings.length; i++){
+        if(processedArray[i] % 2 === 0){
+            arrayOfStrings[i].toUpperCase()
+        }else {
+            arrayOfStrings[i].toLowerCase()
+        }
+    }
+}
+
